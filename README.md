@@ -12,7 +12,7 @@ Used to read and run (for learn python) :)
 
 ##1.4 How to run(In eclipse)
 - Install Tkinter
-- Import to eclipse
+- Import pisio source to eclipse
 - Open file src/pisio.py
 - Run as "Python Run"
 
