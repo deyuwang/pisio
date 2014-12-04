@@ -8,13 +8,12 @@ from link import Link
 from graph import Graph
 
 
-top = Tkinter.Tk()
-C = Tkinter.Canvas(top, bg="white", height=400, width=600)
-graph = Graph(C)
-#graph.reRender()
-C.pack()
+win = Tkinter.Tk()
+canvas = Tkinter.Canvas(win, bg="white", height=400, width=600)
+graph = Graph(canvas)
+canvas.pack()
 
-
+#Create one node
 def randomNode():
     node = Node()
     node.x = random.randint(10, 500)
@@ -23,6 +22,7 @@ def randomNode():
     graph.add(node)
     return node
 
+#Create two nodes and one link
 def randomLink():
     fromNode = randomNode()
     toNode = randomNode()
@@ -38,4 +38,4 @@ def update(no, interval):
 thread.start_new_thread(update, (1,1/10))             
 
 
-top.mainloop()
+win.mainloop()

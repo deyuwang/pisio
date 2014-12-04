@@ -6,11 +6,21 @@ from link import Link
 
 class Graph():
     def __init__(self, canvas):
+        
+        #Render target
         self.canvas = canvas
+        
+        #Containers all nodes for render
         self.nodes = []
+        
+        #Containers all links for render
         self.links = []
+        
         self.bgColor = 'white'
+        
+        #Start a render loop thread
         thread.start_new_thread(self.reRender, (1, 1 / 24))  
+    
     def add(self, obj):
         if(type(obj) == Node):
             self.nodes.append(obj)
