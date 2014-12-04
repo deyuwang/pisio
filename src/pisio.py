@@ -3,9 +3,9 @@ import random
 import thread
 import time
 
-from node import Node
-from link import Link
 from graph import Graph
+from link import Link
+from node import Node
 
 
 win = Tkinter.Tk()
@@ -13,7 +13,7 @@ canvas = Tkinter.Canvas(win, bg="white", height=400, width=600)
 graph = Graph(canvas)
 canvas.pack()
 
-#Create one node
+# Create one node
 def randomNode():
     node = Node()
     node.x = random.randint(10, 500)
@@ -22,7 +22,7 @@ def randomNode():
     graph.add(node)
     return node
 
-#Create two nodes and one link
+# Create two nodes and one link
 def randomLink():
     fromNode = randomNode()
     toNode = randomNode()
@@ -35,7 +35,7 @@ def update(no, interval):
         randomLink()
         time.sleep(interval)
         
-thread.start_new_thread(update, (1,1/10))             
+thread.start_new_thread(update, (1, 1 / 10))             
 
 
 win.mainloop()

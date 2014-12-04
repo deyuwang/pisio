@@ -1,24 +1,25 @@
-import time
 import thread
+import time
 
-from node import Node
 from link import Link
+from node import Node
+
 
 class Graph():
     def __init__(self, canvas):
         
-        #Render target
+        # Render target
         self.canvas = canvas
         
-        #Containers all nodes for render
+        # Containers all nodes for render
         self.nodes = []
         
-        #Containers all links for render
+        # Containers all links for render
         self.links = []
         
         self.bgColor = 'white'
         
-        #Start a render loop thread
+        # Start a render loop thread
         thread.start_new_thread(self.reRender, (1, 1 / 24))  
     
     def add(self, obj):

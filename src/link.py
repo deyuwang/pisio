@@ -1,5 +1,6 @@
 import Tkinter
 
+
 class Link(object):
     ""
     def __init__(self, fromNode, toNode, text="", color="black", textColor="black", width=1):
