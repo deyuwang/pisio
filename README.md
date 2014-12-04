@@ -1,4 +1,3 @@
 pisio
 ==========
-
-Just for learn python.
+A most simple graph demo, just to learn python.
