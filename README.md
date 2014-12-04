@@ -11,7 +11,6 @@ Used to read and run (for learn python) :)
 - time
 
 ##1.4 How to run(In eclipse)
-- Install Tkinter
 - Import pisio source to eclipse
 - Open file src/pisio.py
 - Run as "Python Run"
