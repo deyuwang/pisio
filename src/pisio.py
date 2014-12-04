@@ -14,28 +14,28 @@ graph = Graph(canvas)
 canvas.pack()
 
 # Create one node
-def randomNode():
-    node = Node()
-    node.x = random.randint(10, 500)
-    node.y = random.randint(10, 300)
-    node.color = "black"
-    graph.add(node)
-    return node
 
-# Create two nodes and one link
-def randomLink():
-    fromNode = randomNode()
-    toNode = randomNode()
-    link = Link(fromNode, toNode)
-    graph.add(link)
-    return link
+fromNode = Node("From")
+fromNode.x = random.randint(10, 500)
+fromNode.y = random.randint(10, 300)
+fromNode.width = 32
+fromNode.height = 32
+fromNode.color = "black"
+graph.add(fromNode)
 
-def update(no, interval):
-    while True:
-        randomLink()
-        time.sleep(interval)
-        
-thread.start_new_thread(update, (1, 1 / 10))             
+toNode = Node("To")
+toNode.x = random.randint(10, 500)
+toNode.y = random.randint(10, 300)
+toNode.width = 32
+toNode.height = 32
+toNode.color = "white"
+toNode.textColor = "red"
+graph.add(toNode)
 
+link = Link(fromNode, toNode, "Link")
+link.color = 'green'
+graph.add(link)
+
+graph.render()
 
 win.mainloop()

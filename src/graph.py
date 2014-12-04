@@ -20,7 +20,7 @@ class Graph():
         self.bgColor = 'white'
         
         # Start a render loop thread
-        thread.start_new_thread(self.reRender, (1, 1 / 24))  
+        #thread.start_new_thread(self.reRender, (1, 1 / 24))  
     
     def add(self, obj):
         if(type(obj) == Node):
