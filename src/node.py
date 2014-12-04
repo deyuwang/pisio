@@ -3,7 +3,7 @@ import Tkinter
 
 class Node(object):
     "Visable Object"
-    def __init__(self, text=None, x=0, y=0, width=10, height=10, color="black", textColor="white"):
+    def __init__(self, text=None, x=0, y=0, width=32, height=32, color="black", textColor="white"):
         self.text = text
         self.x = x
         self.y = y
@@ -24,4 +24,3 @@ class Node(object):
     def paint(self, g):    
         g.create_rectangle(self.x, self.y, self.x + self.width, self.y + self.height, fill=self.color)
         g.create_text(self.cx(), self.cy(), text=self.text, fill=self.textColor, anchor=Tkinter.CENTER) 
-

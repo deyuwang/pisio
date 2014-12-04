@@ -6,6 +6,7 @@ import time
 from graph import Graph
 from link import Link
 from node import Node
+from layout import CircleLayout
 
 
 win = Tkinter.Tk()
@@ -18,8 +19,7 @@ canvas.pack()
 fromNode = Node("From")
 fromNode.x = random.randint(10, 500)
 fromNode.y = random.randint(10, 300)
-fromNode.width = 32
-fromNode.height = 32
+fromNode.radius = 32
 fromNode.color = "black"
 graph.add(fromNode)
 
@@ -36,6 +36,9 @@ link = Link(fromNode, toNode, "Link")
 link.color = 'green'
 graph.add(link)
 
+
 graph.render()
+
+
 
 win.mainloop()
